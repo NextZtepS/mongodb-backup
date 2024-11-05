@@ -11,12 +11,12 @@ Then, we will send over the public key to the backup server.
 Modify the following shell commands to specify your backup server ip-address:
 ```shell
 ssh-keygen -t ed25519 -f ~/.ssh/mongo_backup_key && \
-ssh-copy-id -i ~/.ssh/mongo_backup_key.pub user@backup-vps-ip
+ssh-copy-id -i ~/.ssh/mongo_backup_key.pub [user]@[backup-vps-ip]
 ```
 
 You could check if such process is successful by try running:
 ```shell
-sftp -i ~/.ssh/mongo_backup_key user@backup-vps-ip
+sftp -i ~/.ssh/mongo_backup_key [user]@[backup-vps-ip]
 ```
 
 ## Set up a Cronjob on the servers
